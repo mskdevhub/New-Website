@@ -4,7 +4,7 @@
 const sharp = require('sharp');
 
 (async () => {
-  const src = 'public/assets/leftsideimage.jpg';
+  const src = 'sources/leftsideimage.jpg'; // original kept OUT of public/ so it never deploys
   const out = 'public/assets/hero-cutout.webp';
 
   const { data, info } = await sharp(src)
