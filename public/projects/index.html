@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =========================
+         BASIC META
+    ========================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>All Projects — MSK Dev Hub</title>
+
+  <meta name="description"
+    content="All projects by Muhammad Shaheer Kifayat (MSK Dev Hub) — Unity games, 3D experiences and downloadable 3D asset packs, sorted latest release first." />
+  <meta name="author" content="Muhammad Shaheer Kifayat" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1a1a2e" />
+
+  <!-- =========================
+         FAVICONS (../assets/)
+    ========================= -->
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+
+  <!-- =========================
+         PRECONNECT + STYLES
+    ========================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Loader / reveal fallback when JS fails -->
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .site-loader { display: none !important; }
+    </style>
+  </noscript>
+  <script>
+    (function () {
+      function siteFallback() {
+        if (window.__siteReady) return;
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('reveal-active'); });
+        var loader = document.getElementById('site-loader');
+        if (loader) loader.style.display = 'none';
+        if (document.body) document.body.style.overflow = '';
+      }
+      window.addEventListener('load', function () { setTimeout(siteFallback, 3000); });
+      setTimeout(siteFallback, 8000);
+    })();
+  </script>
+</head>
+
+<body>
+  <!--=============== LOADER ===============-->
+  <div id="site-loader" class="site-loader">
+    <div class="loader-bg"></div>
+    <div class="loader-content" id="loader-content">
+      <div class="loader-logo-wrapper" id="loader-logo-wrapper">
+        <img src="../assets/logoimage.png" alt="MSK Dev Hub Logo" class="loader-logo" id="loader-logo">
+      </div>
+      <div class="loader-text" id="loader-text">Initializing MSK Dev Hub...</div>
+      <div class="loader-progress" id="loader-progress">0%</div>
+      <div class="loader-bar-container" id="loader-bar-container">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--=============== NAVBAR ===============-->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="../" class="nav-logo" aria-label="MSK Dev Hub Home">
+        <img src="../assets/logoimage.png" alt="MSK Dev Hub Logo" class="nav-logo-img" width="40" height="40">
+      </a>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../#hero" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./" class="nav-link active-link" aria-current="page">Projects</a></li>
+          <li class="nav-item"><a href="../#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="../#resume" class="nav-link">Resume</a></li>
+          <li class="nav-item"><a href="../#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="../#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="social-links">
+          <!-- Social profiles: @mskdevhub (verify the LinkedIn URL) -->
+          <a href="https://www.linkedin.com/in/mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ri-linkedin-box-fill" aria-hidden="true"></i></a>
+          <a href="https://github.com/mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="ri-github-fill" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/@mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ri-instagram-fill" aria-hidden="true"></i></a>
+          <a href="https://www.tiktok.com/@mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><i class="ri-tiktok-fill" aria-hidden="true"></i></a>
+        </div>
+        <div class="section-deco header-deco">
+          <img src="../assets/shape-1.webp" alt="" class="shape" loading="lazy">
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <div class="nav-settings" id="switcher-toggle" role="button" tabindex="0" aria-label="Style Switcher">
+          <i class="ri-settings-2-line" aria-hidden="true"></i>
+        </div>
+        <div class="nav-toggle" id="nav-toggle" role="button" tabindex="0" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main" id="main-content">
+
+    <!--=============== ALL PROJECTS (FULL LIST) ===============-->
+    <!-- Cards are ordered LATEST FIRST: Release 5 -> Release 1, then asset packs.
+         Home shows only the newest few (see data-home-limits on ../index.html);
+         EVERY project is listed here. Categories: game = 3D & Games, asset = Assets. -->
+    <section class="projects section" id="projects" aria-label="All projects">
+      <h2 class="section-title reveal" data-title="Games, 3D &amp; Assets">All Projects</h2>
+      <div class="container">
+        <ul class="work-list reveal delay-100" aria-label="Filter projects">
+          <li class="work-item active-work" data-filter="all">All</li>
+          <li class="work-item" data-filter="game">3D &amp; Games</li>
+          <li class="work-item" data-filter="asset">Assets</li>
+        </ul>
+        <div class="projects-grid reveal delay-200">
+
+          <article class="project-card game-card game">
+            <div class="game-card-img-wrapper">
+              <!-- TODO: replace this placeholder with your own project screenshot -->
+              <div class="placeholder-img"><i class="ri-car-fill" aria-hidden="true"></i></div>
+              <div class="game-badges"><span class="badge free">Coming Soon</span><span class="badge released">Release 5</span></div>
+            </div>
+            <div class="game-card-content">
+              <div class="game-header"><h3 class="game-title">GTA Style New Input System Game</h3><span class="game-version">v1.0.0</span></div>
+              <p class="game-category">Action Game</p>
+              <p class="game-description">An open-world action game prototype in Unity using the new Input System. Explores GTA-style vehicle mechanics and character movement with modern Unity tooling.</p>
+              <div class="game-tech"><span>Unity</span><span>C#</span><span>New Input System</span></div>
+              <div class="game-platforms"><i class="ri-windows-fill" aria-hidden="true"></i><i class="ri-chrome-fill" aria-hidden="true"></i><i class="ri-android-fill" aria-hidden="true"></i></div>
+              <div class="game-actions">
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Play on Browser</a>
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Download Latest Release</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-github-fill" aria-hidden="true"></i> Source Code</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-file-text-line" aria-hidden="true"></i> Documentation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card game-card game">
+            <div class="game-card-img-wrapper">
+              <!-- TODO: replace this placeholder with your own project screenshot -->
+              <div class="placeholder-img"><i class="ri-run-fill" aria-hidden="true"></i></div>
+              <div class="game-badges"><span class="badge free">Free</span><span class="badge released">Release 4</span></div>
+            </div>
+            <div class="game-card-content">
+              <div class="game-header"><h3 class="game-title">3D Platform Runner Game</h3><span class="game-version">v1.0.0</span></div>
+              <p class="game-category">3D Platformer</p>
+              <p class="game-description">A fast-paced 3D platform runner built in Unity with responsive movement, jumping, dynamic levels and obstacles, and health and score systems.</p>
+              <div class="game-tech"><span>Unity</span><span>C#</span><span>URP</span></div>
+              <div class="game-platforms"><i class="ri-windows-fill" aria-hidden="true"></i><i class="ri-chrome-fill" aria-hidden="true"></i><i class="ri-android-fill" aria-hidden="true"></i></div>
+              <div class="game-actions">
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Play</a>
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Download Latest Release</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-github-fill" aria-hidden="true"></i> Source Code</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-file-text-line" aria-hidden="true"></i> Documentation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card game-card game">
+            <div class="game-card-img-wrapper">
+              <!-- TODO: replace this placeholder with your own project screenshot -->
+              <div class="placeholder-img"><i class="ri-gamepad-fill" aria-hidden="true"></i></div>
+              <div class="game-badges"><span class="badge free">Free</span><span class="badge released">Release 3</span></div>
+            </div>
+            <div class="game-card-content">
+              <div class="game-header"><h3 class="game-title">3D Platform Game</h3><span class="game-version">v1.0.0</span></div>
+              <p class="game-category">Platformer</p>
+              <p class="game-description">A 3D Platform Game built in Unity, focusing on tight controls, engaging level design, and polished mechanics for a satisfying player experience.</p>
+              <div class="game-tech"><span>Unity</span><span>C#</span><span>URP</span><span>Platformer</span></div>
+              <div class="game-platforms"><i class="ri-windows-fill" aria-hidden="true"></i><i class="ri-chrome-fill" aria-hidden="true"></i><i class="ri-android-fill" aria-hidden="true"></i></div>
+              <div class="game-actions">
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Play</a>
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Download Latest Release</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-github-fill" aria-hidden="true"></i> Source Code</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-file-text-line" aria-hidden="true"></i> Documentation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card game-card game">
+            <div class="game-card-img-wrapper">
+              <!-- TODO: replace this placeholder with your own project screenshot -->
+              <div class="placeholder-img"><i class="ri-sword-fill" aria-hidden="true"></i></div>
+              <div class="game-badges"><span class="badge free">Free</span><span class="badge released">Release 2</span></div>
+            </div>
+            <div class="game-card-content">
+              <div class="game-header"><h3 class="game-title">Unity 2D Shooter Game</h3><span class="game-version">v1.0.0</span></div>
+              <p class="game-category">Action &amp; Arcade</p>
+              <p class="game-description">A fast-paced 2D shooter game built with Unity. Features engaging shooting mechanics, dynamic enemies, and a classic arcade experience with sprite-based graphics.</p>
+              <div class="game-tech"><span>Unity</span><span>C#</span><span>2D Physics</span><span>Sprite Graphics</span></div>
+              <div class="game-platforms"><i class="ri-windows-fill" aria-hidden="true"></i><i class="ri-chrome-fill" aria-hidden="true"></i><i class="ri-android-fill" aria-hidden="true"></i></div>
+              <div class="game-actions">
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Play on Browser</a>
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Download Latest Release</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-github-fill" aria-hidden="true"></i> View Source Code</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-file-text-line" aria-hidden="true"></i> Documentation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card game-card game">
+            <div class="game-card-img-wrapper">
+              <!-- TODO: replace this placeholder with your own project screenshot -->
+              <div class="placeholder-img"><i class="ri-planet-fill" aria-hidden="true"></i></div>
+              <div class="game-badges"><span class="badge free">Free</span><span class="badge released">Release 1</span></div>
+            </div>
+            <div class="game-card-content">
+              <div class="game-header"><h3 class="game-title">Unity Solar System Simulation</h3><span class="game-version">v1.0.0</span></div>
+              <p class="game-category">Simulation &amp; Graphics</p>
+              <p class="game-description">A real-time 3D Solar System simulation built using Unity 6 and C# scripting. Features realistic planetary orbits, gravitational physics, and an interactive camera to orbit around the planets.</p>
+              <div class="game-tech"><span>Unity 6</span><span>C#</span><span>Physics</span><span>3D Graphics</span></div>
+              <div class="game-platforms"><i class="ri-windows-fill" aria-hidden="true"></i><i class="ri-chrome-fill" aria-hidden="true"></i><i class="ri-android-fill" aria-hidden="true"></i></div>
+              <div class="game-actions">
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Play on Browser</a>
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Download Latest Release</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-github-fill" aria-hidden="true"></i> View Source Code</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-file-text-line" aria-hidden="true"></i> Documentation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card game-card asset">
+            <div class="game-card-img-wrapper">
+              <!-- TODO: replace this placeholder with your own asset-pack screenshot -->
+              <div class="placeholder-img"><i class="ri-landscape-fill" aria-hidden="true"></i></div>
+              <div class="game-badges"><span class="badge free">Asset Pack</span><span class="badge released">Release 3</span></div>
+            </div>
+            <div class="game-card-content">
+              <div class="game-header"><h3 class="game-title">Sci-Fi Environment Asset Pack</h3><span class="game-version">v1.0.0</span></div>
+              <p class="game-category">3D Assets</p>
+              <p class="game-description">A modular sci-fi environment pack — corridors, walls, panels and props — modeled in Blender with clean topology and PBR materials, ready for Unity and Unreal projects.</p>
+              <div class="game-tech"><span>Blender</span><span>PBR</span><span>Modular</span><span>Unity</span></div>
+              <div class="game-actions">
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Download Pack</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-github-fill" aria-hidden="true"></i> View Source Code</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-file-text-line" aria-hidden="true"></i> Documentation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card game-card asset">
+            <div class="game-card-img-wrapper">
+              <!-- TODO: replace this placeholder with your own asset-pack screenshot -->
+              <div class="placeholder-img"><i class="ri-steering-2-fill" aria-hidden="true"></i></div>
+              <div class="game-badges"><span class="badge free">Asset Pack</span><span class="badge released">Release 2</span></div>
+            </div>
+            <div class="game-card-content">
+              <div class="game-header"><h3 class="game-title">Low-Poly Vehicle Pack</h3><span class="game-version">v1.0.0</span></div>
+              <p class="game-category">3D Assets</p>
+              <p class="game-description">A collection of low-poly vehicles — cars, trucks and bikes — with optimized meshes, light UVs and prefab-ready wheels for stylized racing and open-world games.</p>
+              <div class="game-tech"><span>Blender</span><span>Low-Poly</span><span>Unity</span><span>C#</span></div>
+              <div class="game-actions">
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Download Pack</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-github-fill" aria-hidden="true"></i> View Source Code</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-file-text-line" aria-hidden="true"></i> Documentation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card game-card asset">
+            <div class="game-card-img-wrapper">
+              <!-- TODO: replace this placeholder with your own asset-pack screenshot -->
+              <div class="placeholder-img"><i class="ri-user-star-fill" aria-hidden="true"></i></div>
+              <div class="game-badges"><span class="badge free">Asset Pack</span><span class="badge released">Release 1</span></div>
+            </div>
+            <div class="game-card-content">
+              <div class="game-header"><h3 class="game-title">Character Base Mesh Pack</h3><span class="game-version">v1.0.0</span></div>
+              <p class="game-category">3D Assets</p>
+              <p class="game-description">Ready-to-rig humanoid base meshes with clean edge flow, proper UVs and blend shapes, built for character customization systems and animation pipelines.</p>
+              <div class="game-tech"><span>Blender</span><span>Rigging</span><span>Humanoid</span><span>Animation</span></div>
+              <div class="game-actions">
+                <a href="#" class="btn game-btn primary"><i class="ri-download-cloud-2-fill" aria-hidden="true"></i> Download Pack</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-github-fill" aria-hidden="true"></i> View Source Code</a>
+                <a href="#" class="btn game-btn secondary"><i class="ri-file-text-line" aria-hidden="true"></i> Documentation</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <div class="projects-more reveal delay-300" style="text-align: center; margin-top: 3rem;">
+          <a href="../#contact" class="btn btn-secondary" aria-label="Work With Me">Work With Me <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+        </div>
+        <div class="section-deco deco-right">
+          <img src="../assets/shape-2.webp" alt="" class="shape" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-socials social-links">
+        <a href="https://www.linkedin.com/in/mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="ri-linkedin-box-fill" aria-hidden="true"></i></a>
+        <a href="https://github.com/mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="ri-github-fill" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/@mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="ri-instagram-fill" aria-hidden="true"></i></a>
+        <a href="https://www.tiktok.com/@mskdevhub" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><i class="ri-tiktok-fill" aria-hidden="true"></i></a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 <span>MSK Dev Hub</span>. All Rights Reserved.</p>
+      <p class="footer-copyright">Developed by <span>Muhammad Shaheer Kifayat</span></p>
+    </div>
+  </footer>
+
+  <!--=============== STYLE SWITCHER ===============-->
+  <div class="style-switcher" id="style-switcher">
+    <h2 class="style-switcher-title">Style Switcher</h2>
+
+    <div class="style-switcher-item">
+      <h3 class="style-switcher-subtitle">Colors</h3>
+      <div class="style-switcher-colors">
+        <span class="style-switcher-color active-color" style="--hue:210"><i class="ri-check-line"></i></span>
+        <span class="style-switcher-color" style="--hue:260"><i class="ri-check-line"></i></span>
+        <span class="style-switcher-color" style="--hue:345"><i class="ri-check-line"></i></span>
+        <span class="style-switcher-color" style="--hue:165"><i class="ri-check-line"></i></span>
+        <span class="style-switcher-color" style="--hue:65"><i class="ri-check-line"></i></span>
+        <span class="style-switcher-color" style="--hue:15"><i class="ri-check-line"></i></span>
+      </div>
+    </div>
+
+    <div class="style-switcher-item">
+      <h3 class="style-switcher-subtitle">Theme</h3>
+      <div class="style-switcher-themes">
+        <div class="style-switcher-theme">
+          <input type="radio" class="style-switcher-input" name="body-theme" value="light" checked="true" id="light-theme">
+          <label for="light-theme" class="style-switcher-label">Light</label>
+        </div>
+        <div class="style-switcher-theme">
+          <input type="radio" class="style-switcher-input" name="body-theme" value="dark" id="dark-theme">
+          <label for="dark-theme" class="style-switcher-label">Dark</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="style-switcher-close" id="switcher-close" role="button" tabindex="0" aria-label="Close Style Switcher">
+      <i class="ri-close-line" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <script src="../app.js"></script>
+</body>
+
+</html>
