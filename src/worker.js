@@ -4,7 +4,7 @@ export default {
 
         if (url.pathname === "/api/status") {
             return Response.json({
-                message: "DevLab: HTML, CSS, JavaScript and Cloudflare Worker connected!"
+                message: "MSKDevHub: HTML, CSS, JavaScript and Cloudflare Worker connected!"
             });
         }
 
