@@ -1,6 +1,8 @@
 {
     "name": "MSK Dev Hub",
     "short_name": "MSK Dev Hub",
+    "description": "Portfolio of Muhammad Shaheer Kifayat (MSK Dev Hub) — Unity game developer, 3D content creator and graphic designer.",
+    "start_url": "/",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
